@@ -1,0 +1,26 @@
+{
+  "name": "electricity-tariffs-types",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/electricity-tariffs-types/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/electricity-tariffs-types",
+        "main": "libs/electricity-tariffs-types/src/index.ts",
+        "tsConfig": "libs/electricity-tariffs-types/tsconfig.lib.json",
+        "assets": ["libs/electricity-tariffs-types/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/electricity-tariffs-types/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}
