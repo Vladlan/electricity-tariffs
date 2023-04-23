@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nx run-many --t serve -p front back"
+    "start:dev": "nx run-many --t serve -p front back",
+    "mock-external-tariff-provider-server": "npx json-server -p 3400 -w mock-electricity-tariffs.json"
   },
   "private": true,
   "dependencies": {
@@ -15,11 +16,16 @@
     "@angular/platform-browser": "~15.2.0",
     "@angular/platform-browser-dynamic": "~15.2.0",
     "@angular/router": "~15.2.0",
+    "@nestjs/axios": "^2.0.0",
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/swagger": "^6.3.0",
     "axios": "^1.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "joi": "^17.9.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.8.0",
     "swagger-ui-express": "^4.6.2",
