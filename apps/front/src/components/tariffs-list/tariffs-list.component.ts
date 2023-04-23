@@ -12,4 +12,5 @@ import { AnnualTariffType } from '@electricity-tariffs/electricity-tariffs-types
 })
 export class TariffsListComponent {
   @Input() tariffs: AnnualTariffType[] | null = []
+  @Input() isLoadingData = false;
 }

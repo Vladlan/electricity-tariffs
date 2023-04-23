@@ -1,8 +1,12 @@
+@import './../../scss/mixins/skeleton.scss';
+
 :host {
   display: flex;
   margin-top: 1rem;
 
-  table, th, td {
+  table,
+  th,
+  td {
     border: 1px solid var(--border-color);
   }
 
@@ -14,5 +18,19 @@
 
   thead th:nth-child(1) {
     width: 10rem;
+  }
+
+  .table-skeleton {
+
+    .row {
+      height: 1.7rem;
+      width: 100%;
+      .td {
+        @include skeleton;
+
+        height: 1.2rem;
+        margin: 0.2rem;
+      }
+    }
   }
 }

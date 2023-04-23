@@ -3,10 +3,13 @@
   <div class="form-content">
     <div class="input-group">
       <input
+        currencyMask
+        [options]="inputMaskConfig"
         id="yearConsumption"
-        type="number"
         inputmode="numeric"
+        placeholder="Enter value"
         formControlName="yearConsumption"
+        (keyup.enter)="submit()"
       />
       <button class="reset-btn" type="button" (click)="reset()">
         <svg
@@ -23,8 +26,25 @@
         </svg>
       </button>
     </div>
-    <button class="submit-btn">
+    <button
+      class="submit-btn"
+      [disabled]="
+        tariffsSearchForm.invalid &&
+        (tariffsSearchForm.dirty || tariffsSearchForm.touched)
+      "
+      type="submit"
+    >
       <span>SUBMIT</span>
     </button>
+  </div>
+  <div class="form-errors">
+    <electricity-tariffs-control-error
+      *ngIf="
+        tariffsSearchForm.invalid &&
+        (tariffsSearchForm.dirty || tariffsSearchForm.touched)
+      "
+      [control]="yearConsumption"
+      [errorsMap]="errorsMap"
+    ></electricity-tariffs-control-error>
   </div>
 </form>

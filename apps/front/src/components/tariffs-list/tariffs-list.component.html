@@ -1,4 +1,4 @@
-<table>
+<table *ngIf="tariffs && !isLoadingData; else loadingSkeleton">
   <thead>
     <tr>
       <th>Name</th>
@@ -8,7 +8,21 @@
   <tbody>
     <tr *ngFor="let tariff of tariffs">
       <td>{{ tariff.name }}</td>
-      <td>{{ tariff.annualCost }}</td>
+      <td>{{ tariff.annualCost | number: '0.0-2' }}</td>
     </tr>
   </tbody>
 </table>
+
+<ng-template #loadingSkeleton>
+  <ng-container *ngIf="isLoadingData">
+    <table class="table-skeleton">
+      <tbody>
+        <tr class="row" *ngFor="let item of [].constructor(4);">
+          <td *ngFor="let item of [].constructor(2);">
+            <div class="td"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</ng-template>
