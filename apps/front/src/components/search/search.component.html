@@ -1,6 +1,6 @@
 <form [formGroup]="tariffsSearchForm" (ngSubmit)="submit()">
-  <div class="form-group">
-    <label for="yearConsumption">Consumption (kWh)</label>
+  <label for="yearConsumption">Consumption (kWh)</label>
+  <div class="form-content">
     <div class="input-group">
       <input
         id="yearConsumption"
@@ -8,10 +8,10 @@
         inputmode="numeric"
         formControlName="yearConsumption"
       />
-      <button type="button" (click)="reset()">
+      <button class="reset-btn" type="button" (click)="reset()">
         <svg
-          width="1em"
-          height="1em"
+          width="1.5em"
+          height="1.5em"
           viewBox="0 0 16 16"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -23,5 +23,8 @@
         </svg>
       </button>
     </div>
+    <button class="submit-btn">
+      <span>SUBMIT</span>
+    </button>
   </div>
 </form>

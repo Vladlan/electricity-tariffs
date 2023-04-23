@@ -1,10 +1,14 @@
-<h1>
-  {{ appTitle }}
-</h1>
-<electricity-tariffs-search
-  (formReset)="clearFormAndResults()"
-  (formSubmit)="fetchElectricityTariffs($event)"
-></electricity-tariffs-search>
-<electricity-tariffs-tariffs-list
-  [tariffs]="annualTariffs$ | async"
-></electricity-tariffs-tariffs-list>
+<main>
+  <h1>
+    {{ appTitle }}
+  </h1>
+  <electricity-tariffs-search
+    (formReset)="clearFormAndResults()"
+    (formSubmit)="fetchElectricityTariffs($event)"
+  ></electricity-tariffs-search>
+  <ng-container *ngIf="(annualTariffs$ | async)?.length">
+    <electricity-tariffs-tariffs-list
+      [tariffs]="annualTariffs$ | async"
+    ></electricity-tariffs-tariffs-list>
+  </ng-container>
+</main>

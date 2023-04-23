@@ -1,20 +1,50 @@
 :host {
   display: flex;
 
+  .form-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
   button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  .reset-btn {
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
-    display: flex;
-    font-size: 1rem;
-    border-left: 1px solid;
+    width: 2rem;
+    max-width: 2rem;
+    border-left: 1px solid var(--border-color);
     border-right: 1px solid transparent;
     background-color: transparent;
-
     svg {
       margin: auto;
     }
+  }
+
+  .submit-btn {
+    width: 5rem;
+    max-width: 5rem;
+    height: 2rem;
+    margin: 0 0 0 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.2rem;
   }
 
   .input-group {
@@ -23,8 +53,8 @@
   }
 
   input {
-    padding: 0 2rem 0 0.5rem;
-    border: 1px solid;
+    padding: 0 2.5rem 0 0.5rem;
+    border: 1px solid var(--border-color);
     height: 2rem;
     border-radius: 0.2rem;
   }
