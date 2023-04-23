@@ -1,4 +1,4 @@
-<form [formGroup]="tariffsSearchForm" (ngSubmit)="submit($event)">
+<form [formGroup]="tariffsSearchForm" (ngSubmit)="submit()">
   <div class="form-group">
     <label for="yearConsumption">Consumption (kWh)</label>
     <div class="input-group">
@@ -8,7 +8,7 @@
         inputmode="numeric"
         formControlName="yearConsumption"
       />
-      <button type="button" (click)="reset($event)">
+      <button type="button" (click)="reset()">
         <svg
           width="1em"
           height="1em"

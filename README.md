@@ -32,3 +32,5 @@ nx test common
 # to create a component
 nx generate @nrwl/angular:component ../components/search --project=front --standalone
   
+# to create a service
+nx generate @nrwl/angular:service ../services/electricity-tariffs --project=front

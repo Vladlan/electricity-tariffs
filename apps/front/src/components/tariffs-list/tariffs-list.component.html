@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tariff of tariffs">
+      <td>{{ tariff.name }}</td>
+      <td>{{ tariff.annualCost }}</td>
+    </tr>
+  </tbody>
+</table>

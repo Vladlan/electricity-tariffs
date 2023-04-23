@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 
@@ -21,11 +21,21 @@ export class SearchComponent {
     ]),
   });
 
-  submit(e: Event) {
-    console.log('submit e: ', e);
+  @Output()
+  formSubmit = new EventEmitter<number>();
+
+  @Output()
+  formReset = new EventEmitter<void>();
+
+  submit() {
+    const yearConsumption = this.tariffsSearchForm.value.yearConsumption;
+    if (yearConsumption) {
+      this.formSubmit.emit(yearConsumption);
+    }
   }
 
-  reset(e: Event) {
-    console.log('reset: ', e);
+  reset() {
+    this.tariffsSearchForm.reset();
+    this.formReset.emit();
   }
 }
