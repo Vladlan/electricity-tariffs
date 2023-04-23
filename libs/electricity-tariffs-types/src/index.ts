@@ -1,1 +1,1 @@
-export * from './lib/electricity-tariffs-types';
+export * from './lib/tariff.type';

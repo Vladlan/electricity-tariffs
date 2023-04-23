@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"jest.disabledWorkspaceFolders": [
+			"electricity-tariffs",
+			"electricity-tariffs",
+			"electricity-tariffs-types",
+			"common"
+		],
+		"vue.features.codeActions.enable": false
+	}
+}

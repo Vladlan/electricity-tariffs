@@ -15,3 +15,17 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+
+### Useful commands
+```bash
+# generate lib
+npx nx g @nrwl/js:lib mylib
+
+# to build front with stats
+nx build front --stats-json
+
+# to test common lib
+nx test common
+
+
