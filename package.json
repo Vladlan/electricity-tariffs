@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "nx run-many --t serve -p front back",
-    "mock-external-tariff-provider-server": "npx json-server -p 3400 -w mock-electricity-tariffs.json"
+    "mock-external-tariff-server": "node ./mock-external-tariffs-server.js"
   },
   "private": true,
   "dependencies": {

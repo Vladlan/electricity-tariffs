@@ -28,7 +28,6 @@ nx build front --stats-json
 # to test common lib
 nx test common
 
-
 # to create a component
 nx generate @nrwl/angular:component ../components/search --project=front --standalone
   
@@ -37,3 +36,9 @@ nx generate @nrwl/angular:service ../services/electricity-tariffs --project=fron
 
 # to create an interceptor
 nx generate @nrwl/angular:interceptor ../interceptors/http-error --project=front
+
+# Root builder image for monorepo
+docker build . -t electricity-tariffs-base-img:nx-dev
+
+# To run apps in dev mode from docker
+docker-compose up
