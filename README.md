@@ -34,3 +34,6 @@ nx generate @nrwl/angular:component ../components/search --project=front --stand
   
 # to create a service
 nx generate @nrwl/angular:service ../services/electricity-tariffs --project=front
+
+# to create an interceptor
+nx generate @nrwl/angular:interceptor ../interceptors/http-error --project=front

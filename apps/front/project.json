@@ -16,7 +16,10 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/front/tsconfig.app.json",
         "assets": ["apps/front/src/favicon.ico", "apps/front/src/assets"],
-        "styles": ["apps/front/src/styles.scss"],
+        "styles": [
+          "apps/front/src/styles.scss",
+          "node_modules/ngx-toastr/toastr.css"
+        ],
         "scripts": []
       },
       "configurations": {
