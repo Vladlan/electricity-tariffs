@@ -29,3 +29,6 @@ nx build front --stats-json
 nx test common
 
 
+# to create a component
+nx generate @nrwl/angular:component ../components/search --project=front --standalone
+  

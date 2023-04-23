@@ -1,13 +1,14 @@
 import { Component } from "@angular/core";
-import { NxWelcomeComponent } from "./nx-welcome.component";
+import { SearchComponent } from "../../components/search/search.component";
+import { APP_TITLE } from "../../constans";
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent],
+  imports: [SearchComponent],
   selector: "electricity-tariffs-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  title = "front";
+  appTitle = APP_TITLE;
 }
