@@ -4,7 +4,8 @@
 1. You should have `nodejs`, `docker 20.10.xx` and `docker-compose v2.xx.x`
 2. Run `docker build . -t electricity-tariffs-base-img:nx-dev` to build builder image which will be required for docker-compose app images
 3. Run `docker-compose up` to up front and back
-3. Run `npm run mock-external-tariff-server` to run mock external electricity tariffs server
+4. Run `npm run mock-external-tariff-server` to run mock external electricity tariffs server
+5. Visit `http://localhost:4900`
 
 ### Useful commands for development
 ```bash
